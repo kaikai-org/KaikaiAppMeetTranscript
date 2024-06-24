@@ -1,0 +1,17 @@
+pyannote.audio
+git+https://github.com/huggingface/speechbox
+datasets[audio]
+librosa
+ipython
+transformers
+git+https://github.com/huggingface/transformers
+
+pip install --upgrade evaluate jiwer
+
+speechrecognition
+pyaudio
+kivy
+torch
+transformers
+datasets
+speechbox

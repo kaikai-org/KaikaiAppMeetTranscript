@@ -1,0 +1,46 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    Label:
+        id: label
+        text: 'Enter duration (in seconds) and press "Record" to start recording, or load an audio file'
+        font_size: '20sp'
+        halign: 'center'
+        valign: 'middle'
+        size_hint_y: None
+        height: 50
+
+    TextInput:
+        id: duration_input
+        hint_text: 'Enter duration in seconds'
+        input_filter: 'int'
+        multiline: False
+        size_hint_y: None
+        height: 50
+        font_size: '20sp'
+
+    Button:
+        text: 'Record'
+        on_press: app.record_audio
+        font_size: '20sp'
+        size_hint_y: None
+        height: 50
+
+    Button:
+        text: 'Load Audio File'
+        on_press: app.load_audio_file
+        font_size: '20sp'
+        size_hint_y: None
+        height: 50
+
+    Label:
+        id: transcription_label
+        text: 'Transcription will appear here'
+        font_size: '20sp'
+        halign: 'left'
+        valign: 'top'
+        size_hint_y: None
+        height: 400
+        text_size: self.width, None
